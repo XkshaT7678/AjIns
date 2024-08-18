@@ -13,7 +13,7 @@ body {
 }
 
 .logo {
-    font-family: 'Lobster', cursive;
+    font-family: 'Designer', cursive;
     font-size: 3em;
     margin-bottom: 20px;
     animation: logoAnimation 2s ease-in-out infinite;
