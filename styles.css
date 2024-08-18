@@ -13,10 +13,10 @@ body {
 }
 
 .logo {
-    font-family: 'Designer', sans-serif;
+    font-family: 'Designer', bold;
     font-size: 3em;
     margin-bottom: 20px;
-    animation: logoAnimation 2s ease-in-out infinite;
+    animation: logoAnimation 3s ease-in-out infinite;
 }
 
 h2 {
