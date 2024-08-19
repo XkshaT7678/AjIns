@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
             preloader.style.display = 'none';
             document.getElementById('login-container').classList.remove('hidden');
         }, 600); // 600ms delay to allow fade-out
-    }, 1500); // 1500ms preloader duration
+    }, 2000); // 2000ms preloader duration
 
     document.getElementById('class9').style.display = 'block';
 });
