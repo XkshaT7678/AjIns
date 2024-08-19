@@ -1,3 +1,17 @@
+document.addEventListener('DOMContentLoaded', function() {
+    // Hide preloader after page load
+    const preloader = document.getElementById('preloader');
+    setTimeout(() => {
+        preloader.style.opacity = '0';
+        setTimeout(() => {
+            preloader.style.display = 'none';
+            document.getElementById('login-container').classList.remove('hidden');
+        }, 600); // 600ms delay to allow fade-out
+    }, 1500); // 1500ms preloader duration
+
+    document.getElementById('class9').style.display = 'block';
+});
+
 function checkPassword() {
     const password = document.getElementById('password').value;
     const correctPassword = '110085'; // Set your password here
@@ -24,8 +38,3 @@ function openTab(evt, className) {
     document.getElementById(className).style.display = 'block';
     evt.currentTarget.className += ' active';
 }
-
-// Set default tab to open on page load
-document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('class9').style.display = 'block';
-});
