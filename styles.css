@@ -20,7 +20,7 @@
     width: 80px;
     height: 100px;
     position: relative;
-    perspective: 600px; /* Add perspective for smoother 3D effect */
+    perspective: 600px;
     animation: bookAnimation 2s infinite ease-in-out;
 }
 
@@ -32,13 +32,13 @@
     position: absolute;
     top: 0;
     left: 0;
-    backface-visibility: hidden; /* Prevents flickering */
+    backface-visibility: hidden;
 }
 
 .book .page {
     background: #f39c12;
     transform-origin: left;
-    animation: pageFlip 1s infinite ease-in-out; /* Adjust timing for smoothness */
+    animation: pageFlip 1s infinite ease-in-out;
 }
 
 @keyframes bookAnimation {
@@ -60,10 +60,36 @@
 
 #preloader p {
     margin-top: 20px;
-    font-family: 'Designer, bold;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 700;
 }
 
+/* Progress Bar Styles */
+.progress-container {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-top: 20px;
+    height: 10px;
+    overflow: hidden;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0;
+    background-color: #e74c3c;
+    border-radius: 10px;
+    transition: width 0.1s ease; /* Added transition for smooth width change */
+}
+
+.progress-text {
+    margin-top: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
 
 /* General Styles */
 body {
