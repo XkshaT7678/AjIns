@@ -1,13 +1,27 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Hide preloader after page load
     const preloader = document.getElementById('preloader');
-    setTimeout(() => {
-        preloader.style.opacity = '0';
-        setTimeout(() => {
-            preloader.style.display = 'none';
-            document.getElementById('login-container').classList.remove('hidden');
-        }, 600); // 600ms delay to allow fade-out
-    }, 2000); // 2000ms preloader duration
+    const progressBar = document.getElementById('progress-bar');
+    const progressText = document.getElementById('progress-text');
+    let progress = 0;
+
+    // Simulate progress
+    const progressInterval = setInterval(() => {
+        progress += 1;
+        progressBar.style.width = progress + '%';
+        progressText.textContent = progress + '%';
+
+        if (progress >= 100) {
+            clearInterval(progressInterval);
+            setTimeout(() => {
+                preloader.style.opacity = '0';
+                setTimeout(() => {
+                    preloader.style.display = 'none';
+                    document.getElementById('login-container').classList.remove('hidden');
+                }, 600); // 600ms delay to allow fade-out
+            }, 300); // small delay after reaching 100%
+        }
+    }, 20); // Adjust speed as needed, here it's set to complete in 2 seconds
 
     document.getElementById('class9').style.display = 'block';
 });
