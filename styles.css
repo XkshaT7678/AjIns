@@ -82,7 +82,7 @@
     width: 0;
     background-color: #e74c3c;
     border-radius: 10px;
-    transition: width 0.1s ease; /* Added transition for smooth width change */
+    transition: width 0.2s ease; /* Added transition for smooth width change */
 }
 
 .progress-text {
