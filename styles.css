@@ -13,7 +13,7 @@ body {
 }
 
 .logo {
-    font-family: 'Lobster', cursive;
+    font-family: 'Designer', bold;
     font-size: 3em;
     margin-bottom: 20px;
     animation: logoAnimation 3s ease-in-out infinite;
@@ -43,11 +43,6 @@ h2 {
     font-size: 1.1em;
 }
 
-#password:focus {
-    outline: none;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
 button {
     padding: 10px 20px;
     background-color: #e74c3c;
@@ -69,9 +64,6 @@ button:hover {
     color: #f8d7da;
     margin-top: 10px;
     font-size: 0.9em;
-    background: rgba(231, 76, 60, 0.1);
-    padding: 5px;
-    border-radius: 5px;
 }
 
 #content-container {
@@ -80,7 +72,6 @@ button:hover {
     max-width: 1100px;
     animation: fadeInUp 1.5s ease;
     overflow-y: auto;
-    padding-bottom: 60px; /* To avoid footer overlap */
 }
 
 header {
@@ -117,7 +108,6 @@ header {
 .tab-link.active {
     background: #e74c3c;
     transform: scale(1.1);
-    transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .tab-link:hover {
@@ -151,6 +141,8 @@ footer {
     animation: fadeIn 1.5s ease;
 }
 
+
+
 .hidden {
     display: none;
 }
@@ -178,15 +170,6 @@ footer {
     }
     to {
         opacity: 1;
-    }
-}
-
-@keyframes fadeOut {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
     }
 }
 
@@ -219,12 +202,4 @@ footer {
         transform: scale(1.1);
         color: #f39c12;
     }
-}
-
-.fade-in {
-    animation: fadeIn 1s forwards;
-}
-
-.fade-out {
-    animation: fadeOut 1s forwards;
-}
+    }
