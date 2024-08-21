@@ -106,7 +106,7 @@ body {
 }
 
 .logo {
-    font-family: 'Designer', bold;
+    font-family: 'Audiowide, bold;
     font-size: 3em;
     margin-bottom: 20px;
     animation: logoAnimation 3s ease-in-out infinite;
