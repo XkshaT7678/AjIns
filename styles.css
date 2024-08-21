@@ -60,8 +60,8 @@
 
 #preloader p {
     margin-top: 20px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
 }
 
 /* Progress Bar Styles */
@@ -82,18 +82,18 @@
     width: 0;
     background-color: #e74c3c;
     border-radius: 10px;
-    transition: width 0.2s ease;
+    transition: width 0.2s ease; /* Added transition for smooth width change */
 }
 
 .progress-text {
     margin-top: 5px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
 }
 
 /* General Styles */
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
     background: linear-gradient(135deg, #6dd5ed, #2193b0);
     color: #fff;
     margin: 0;
@@ -106,15 +106,15 @@ body {
 }
 
 .logo {
-    font-family: 'Pacifico', cursive;
+    font-family: 'Audiowide, bold;
     font-size: 3em;
     margin-bottom: 20px;
     animation: logoAnimation 3s ease-in-out infinite;
 }
 
 h2 {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
     margin-bottom: 20px;
 }
 
@@ -144,8 +144,8 @@ button {
     color: #fff;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
 }
 
 button:hover {
@@ -179,75 +179,120 @@ header {
     background: rgba(255, 255, 255, 0.1);
     padding: 10px;
     border-radius: 10px;
+    margin-bottom: 20px;
+    animation: slideIn 1s ease;
 }
 
 .tab-link {
     flex: 1;
-    padding: 10px;
-    margin: 5px;
-    background: rgba(255, 255, 255, 0.2);
-    border: none;
-    border-radius: 5px;
+    background: transparent;
     color: #fff;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
+    padding: 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 10px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-transform: uppercase;
+    transition: background 0.3s ease, transform 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+.tab-link.active {
+    background: #e74c3c;
+    transform: scale(1.1);
 }
 
 .tab-link:hover {
-    background-color: #e74c3c;
+    background: rgba(255, 255, 255, 0.2);
     transform: translateY(-3px);
 }
 
 .tab-content {
     display: none;
+    animation: fadeIn 1s forwards;
+}
+
+.tab-content iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
     animation: fadeIn 1.5s ease;
 }
 
-.tab-content.active {
-    display: block;
+
+
+.hidden {
+    display: none;
 }
 
-/* Typing Effect Header */
-.main-header {
-    font-family: 'Pacifico', cursive;
-    font-size: 2.5em;
-    color: #fff;
-    text-align: center;
-    margin-bottom: 50px;
-    letter-spacing: 2px;
-}
-
-.cursor {
-    display: inline-block;
-    width: 3px;
-    background-color: #e74c3c;
-    margin-left: 5px;
-    animation: blink 0.7s infinite;
-}
-
-@keyframes blink {
-    0%, 50%, 100% {
-        opacity: 1;
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .tabs {
+        flex-direction: column;
     }
-    25%, 75% {
+
+    .tab-link {
+        margin: 10px 0;
+    }
+
+    #content-container {
+        max-height: 70vh;
+        overflow-y: auto;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
         opacity: 0;
     }
-}
-
-/* Keyframes for Animation */
-@keyframes fadeIn {
-    0% { opacity: 0; transform: translateY(30px); }
-    100% { opacity: 1; transform: translateY(0); }
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes fadeInUp {
-    0% { opacity: 0; transform: translateY(50px); }
-    100% { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
 }
 
 @keyframes logoAnimation {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-}
+    0%, 100% {
+        transform: scale(1);
+        color: #e74c3c;
+    }
+    50% {
+        transform: scale(1.1);
+        color: #f39c12;
+    }
+    }
